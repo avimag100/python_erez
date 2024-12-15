@@ -1,0 +1,3 @@
+{
+  "python.analysis.extraPaths": ["./vlan_config/config"]
+}

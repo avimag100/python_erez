@@ -1,0 +1,7 @@
+תוצאת הפינג מנתב 1 לנתב 2:
+!!!!!!
+Success rate is 100 percent (5/5)
+
+תוצאת הפינג מנתב 2 לנתב 1:
+!!!!!!
+Success rate is 100 percent (5/5)

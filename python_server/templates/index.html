@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flask Communication</title>
+    <!-- Link to the external CSS file -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Send a Message to Flask</h1>
+
+    <!-- Form to input a message -->
+    <form id="messageForm">
+      <label for="message">Message:</label>
+      <input type="text" id="message" name="message" required />
+      <button type="submit">Send</button>
+    </form>
+
+    <!-- Section to display the response from Flask -->
+    <h2>Response:</h2>
+    <pre id="response"></pre>
+
+    <script>
+      // JavaScript to handle form submission and communication with Flask
+      document
+        .getElementById("messageForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault(); // Prevent the form from refreshing the page
+
+          const message = document.getElementById("message").value;
+
+          try {
+            // Send the message to the Flask server
+            const response = await fetch("/", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ message }),
+            });
+
+            // Get the response from the Flask app
+            const result = await response.json();
+
+            // Display the response in the <pre> element
+            document.getElementById("response").textContent = JSON.stringify(
+              result,
+              null,
+              2
+            );
+          } catch (error) {
+            console.error("Error:", error);
+          }
+        });
+    </script>
+  </body>
+</html>
