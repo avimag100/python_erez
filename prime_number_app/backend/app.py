@@ -1,14 +1,15 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS 
 import psycopg2
 import math
 import os
 
 app = Flask(__name__)
+CORS(app)
 
-# חיבור למסד נתונים PostgreSQL
 def get_db_connection():
     conn = psycopg2.connect(
-        host=os.getenv('DB_HOST', 'db'),
+        host=os.getenv('DB_HOST', '/database/numbers.db'),
         database=os.getenv('DB_NAME', 'prime_numbers'),
         user=os.getenv('DB_USER', 'user'),
         password=os.getenv('DB_PASSWORD', 'password')
