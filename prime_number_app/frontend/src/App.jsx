@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 
 function App() {
-  // שמירה על הערך שהוזן בשדה
   const [number, setNumber] = useState("");
   const [result, setResult] = useState("");
 
-  // פונקציה לבדיקת אם המספר ראשוני והאם הוא כבר נבדק
   const checkNumber = () => {
     fetch("http://localhost:5000/check_number", {
       method: "POST",
@@ -33,7 +31,7 @@ function App() {
       <input
         type="number"
         value={number}
-        onChange={(e) => setNumber(e.target.value)} // עדכון ערך השדה
+        onChange={(e) => setNumber(e.target.value)}
         placeholder="Enter a number"
       />
       <button onClick={checkNumber}>Check Number</button>
