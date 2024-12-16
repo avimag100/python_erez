@@ -1,0 +1,85 @@
+/* App container styling */
+.App {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fb;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main content container */
+.App-container {
+  background-color: white;
+  padding: 40px 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Header styling */
+.App-header {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Input and button container */
+.App-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Input field styling */
+.App-input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.App-input:focus {
+  border-color: #4e90fe;
+  outline: none;
+}
+
+/* Button styling */
+.App-button {
+  padding: 12px;
+  background-color: #4e90fe;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.App-button:disabled {
+  background-color: #b0c4de;
+  cursor: not-allowed;
+}
+
+.App-button:hover:not(:disabled) {
+  background-color: #3878d2;
+}
+
+/* Result text styling */
+.App-result {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}

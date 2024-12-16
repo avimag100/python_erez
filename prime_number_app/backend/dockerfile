@@ -1,0 +1,18 @@
+# Dockerfile עבור ה-backend
+FROM python:3.11-slim
+
+# הגדרת ספריות עבודה
+WORKDIR /app
+
+# העתקת קבצי requirements.txt והתקנת התלויות
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+
+# העתקת קבצי הקוד
+COPY . .
+
+# חשיפת הפורט של Flask
+EXPOSE 5000
+
+# הרצת היישום
+CMD ["python", "app.py"]

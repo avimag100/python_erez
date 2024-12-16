@@ -1,0 +1,103 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  padding: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Header Styling */
+h1 {
+  color: #4caf50;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+  margin: 20px 0;
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Label and Input Styling */
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="text"]:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+/* Button Styling */
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Response Styling */
+h2 {
+  margin-top: 40px;
+  color: #555;
+}
+
+pre {
+  text-align: left;
+  background-color: #eee;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  input[type="text"],
+  button {
+    width: 100%;
+  }
+}
